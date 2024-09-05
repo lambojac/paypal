@@ -1,12 +1,14 @@
 //require dotenv
 require("dotenv").config()
 //require express
+const cors=require(cors)
 const express=require("express")
 const paypal=require("./services/paypal")
 const stripe=require("stripe")(process.env.STRIPE_SECRET_KEY)
 //port 3000
 port=3000
 const app=express()
+app.use(cors)
 // setting the template engine
 app.set("view engine", "ejs")
 //render
