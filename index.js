@@ -2,6 +2,7 @@
 require("dotenv").config()
 //require express
 const cors=require(cors)
+const app=express()
 const express=require("express")
 const paypal=require("./services/paypal")
 const stripe=require("stripe")(process.env.STRIPE_SECRET_KEY)
