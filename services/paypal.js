@@ -17,7 +17,7 @@ const generateAccessToken = async () => {
     console.log(response.data)
     return response.data.access_token;
   } catch (error) {
-    console.error("Error generating access token:", error.response ? error.response.data : error.message);
+    console.error("Error generating your access token ", error.response ? error.response.data : error.message);
   }
 };
 
